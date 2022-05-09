@@ -17,12 +17,14 @@ public class JPanneauCalculette extends JFrame {
 	private JTextField nombre1Field, resultatField;
 	private JButton ajouterButton;
 	private JButton effacerButton;
+	private JButton multiplierButton;
 
 	public JPanneauCalculette() {
 		nombre1Field = new JTextField(10);
 		resultatField = new JTextField(10);
 		resultatField.setEditable(false); // pas modifiable.
 		ajouterButton = new JButton("+");
+		multiplierButton = new JButton("*");
 		effacerButton = new JButton("effacer");
 		mettreEnPage();
 	}
@@ -35,6 +37,7 @@ public class JPanneauCalculette extends JFrame {
 		panel1.setLayout(new GridLayout(4,1));
 		panel1.add(nombre1Field);
 		panel1.add(ajouterButton);
+		panel1.add(multiplierButton);
 		panel1.add(resultatField);
 		panel1.add(effacerButton);
 		this.add(panel1);// ajoute le panel à la frame.
